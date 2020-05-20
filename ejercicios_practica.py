@@ -7,7 +7,7 @@ Autor: Inove Coding School
 Version: 1.2
  
 Descripcion:
-Programa creado para que practiquen los conocimietos adquiridos durante la semana
+Programa creado para que practiquen los conocimientos adquiridos durante la semana
 '''
 
 __author__ = "Inove Coding School"
@@ -31,6 +31,14 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+    numero_1 = float(input('Ingrese el primer numero real: '))
+    numero_2 = float(input('Ingrese el segundo numero real: '))
+    print()
+    print('La suma entre',numero_1,'y',numero_2,'es',round(numero_1 + numero_2, 2))
+    print('La resta entre',numero_1,'y',numero_2,'es',round(numero_1 - numero_2, ))
+    print('La multiplicación entre',numero_1,'y',numero_2,'es',round(numero_1 * numero_2, 2))
+    print('La división es',numero_1,'y',numero_2,'es',round(numero_1 / numero_2, 2))
+    print('La potencia de base',numero_1,'y exponente',numero_2,'es',round(numero_1 ** numero_2, 2))
 
 def ej2():
     # Ejercicios de práctica numérica y cadenas
@@ -50,6 +58,14 @@ def ej2():
       está hablando.
 
     '''
+    nombre = input('Ingrese su nombre completo: ')
+    DNI = int(input('Ingrese su DNI: '))
+    edad = int(input('Ingrese su edad: '))
+    altura = float(input('Ingrese su altura en metros: '))
+    print()
+    print('Nombre completo:',nombre,'; DNI:',DNI)
+    print('Nombre completo:',nombre,'; edad:',edad,'años; altura:', altura) 
+
 def ej3():
     # Ejercicios de práctica con cadenas
 
@@ -79,6 +95,16 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
         
     '''
+    nombre_padre = str(input('Ingrese el nombre completo del padre:'))
+    nombre_madre = str(input('Ingrese el nombre completo de la madre:'))
+    nombre_hijo = str(input('Ingrese nombre del hijo:'))
+
+    apellido_padre = nombre_padre.split(' ')
+    apellido_madre = nombre_madre.split(' ')
+    # print(apellido_padre[len(apellido_padre)-1])
+    # print(apellido_madre[len(apellido_madre)-1])
+
+    print('El nombre del hijo/a es:',nombre_hijo,apellido_padre[len(apellido_padre)-1],apellido_madre[len(apellido_madre)-1])
 
 def ej4():
     # Ejercicios de práctica con cadenas
@@ -107,9 +133,14 @@ def ej4():
     https://www.pythonforbeginners.com/dictionary/python-split
 
     Cualquier duda con el método split pueden consultarla por el campus
-    
-        
+         
     '''
+    persona_1 = str(input('Ingrese el nombre y apellido de la primera persona:'))
+    persona_2 = str(input('Ingrese el nombre y apellido de la segunda persona:'))
+    apellido_2 = persona_2.split(' ')
+    # print(apellido_2[1])
+    pariente = apellido_2[1] in persona_1
+    print('¿',persona_2,'es pariente de',persona_1,'?',pariente)
 
 def ej5():
     # Ejercicios de práctica con cadenas
@@ -135,13 +166,20 @@ def ej5():
 
     Cualquier duda con estos métodos pueden consultarla por el campus
     
-
     '''
+    nombre = str(input('Ingrese su nombre completo: '))
+
+    nombre = nombre.lower()
+    print(nombre)
+    nombre = nombre.upper()
+    print(nombre)
+    nombre = nombre.capitalize()
+    print(nombre)
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
+    #ej1()
     #ej2()
     #ej3()
     #ej4()
-    #ej5()
+    ej5()
